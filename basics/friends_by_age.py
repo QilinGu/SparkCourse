@@ -17,7 +17,7 @@ def parseLine(line):
     # like (33,385)
     return (age, numFriends)
 
-lines = sc.textFile("data/fakefriends.csv")
+lines = sc.textFile("../data/fakefriends.csv")
 # get a key/value pair rdd
 rdd = lines.map(parseLine)
 # use rdd.mapValues if transformation doesn't touch keys, more efficient

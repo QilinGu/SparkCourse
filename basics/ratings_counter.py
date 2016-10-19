@@ -7,7 +7,7 @@ conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
 sc = SparkContext(conf = conf)
 
 # Create a RDD, core concept
-lines = sc.textFile("data/ml-100k/u.data")
+lines = sc.textFile("../data/ml-100k/u.data")
 # sample data
 # 166 346 1   886397596
 # 298 474 4   884182806

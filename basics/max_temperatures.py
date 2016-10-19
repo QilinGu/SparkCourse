@@ -10,7 +10,7 @@ def parseLine(line):
     temperature = float(fields[3]) * 0.1 * (9.0 / 5.0) + 32.0
     return (stationID, entryType, temperature)
 
-lines = sc.textFile("data/1800.csv")
+lines = sc.textFile("../data/1800.csv")
 parsed_lines = lines.map(parseLine)
 max_temps = parsed_lines.filter(lambda x: "TMAX" in x[1])
 station_temps = max_temps.map(lambda x: (x[0],x[2]))
