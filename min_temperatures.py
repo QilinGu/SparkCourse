@@ -29,3 +29,7 @@ for result in results:
     print(result[0] + "\t{:.2f}F".format(result[1]))
     # ITE00100554 5.36F
     # EZE00100082 7.70F
+
+# Think of rdd as three parts of your file
+# Think of lines as a list of line, similar API with list and its elements
+# Think each line as a string, dictionary, tuple etc.
